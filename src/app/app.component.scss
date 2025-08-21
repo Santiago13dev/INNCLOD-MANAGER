@@ -1,0 +1,8 @@
+.appbar {
+  position: sticky; top: 0; z-index: 100;
+}
+.brand {
+  display:flex; align-items:center; gap:8px; font-weight:600;
+}
+.nav { margin-left:auto; display:flex; gap:8px; }
+a.active { text-decoration: underline; }

@@ -1,0 +1,38 @@
+@use '@angular/material' as mat;
+
+// Núcleo Material
+@include mat.core();
+
+// Paletas (ajusta a gusto)
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent:  mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$warn:    mat.define-palette(mat.$red-palette);
+
+// Tipografía (opcional)
+$typography: mat.define-typography-config(
+  $font-family: 'Roboto, "Helvetica Neue", Arial, sans-serif'
+);
+
+// Tema claro
+$theme: mat.define-light-theme((
+  color: (primary: $primary, accent: $accent, warn: $warn),
+  typography: $typography,
+  density: 0
+));
+
+// Aplica a todos los componentes
+@include mat.all-component-themes($theme);
+
+// Utilidades y layout global
+:root { --page-max: 980px; --gap: 16px; }
+html, body { height: 100%; }
+body { margin: 0; background: #f7f7fb; }
+.page { max-width: var(--page-max); margin: 0 auto; padding: 16px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+h2 { margin: 0 0 12px; }
+.mat-mdc-list-item:hover { background: rgba(0,0,0,.03); }
+.badge { margin-left: .5rem; padding: 0 .5rem; border-radius: 999px; font-size: .72rem; font-weight: 600; line-height: 20px; }
+.badge.api   { background:#e3f2fd; color:#1565c0; }
+.badge.local { background:#fff3e0; color:#ef6c00; }
+.empty { display:flex; gap:8px; align-items:center; padding:16px; }
+.state { display:flex; align-items:center; gap:8px; padding:16px; color:#555; }

@@ -1,0 +1,17 @@
+<!-- Nav visible solo autenticado: evita mostrar acciones inválidas -->
+
+<mat-toolbar color="primary" class="appbar">
+  <div class="brand">
+    <mat-icon aria-hidden="true">dashboard</mat-icon>
+    <span>Innclod Manager</span>
+  </div>
+
+  <nav *ngIf="auth.isLoggedIn()" class="nav" aria-label="Main navigation">
+    <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
+    <button mat-button (click)="logout()" aria-label="Logout">Logout</button>
+  </nav>
+</mat-toolbar>
+
+<main class="page">
+  <router-outlet></router-outlet>
+</main>
