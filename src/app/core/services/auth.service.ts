@@ -47,7 +47,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem(KEY);
-    localStorage.removeItem(LEGACY_KEY); // por si quedó algo viejo
+    localStorage.removeItem(LEGACY_KEY); 
     this.router.navigate(['/login']);
   }
 }

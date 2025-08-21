@@ -6,6 +6,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from './core/services/auth.service';
 
+/**
+ *  * Shell de la app (layout global).
+ * - Toolbar “pegada” arriba con acciones (Projects, Logout).
+ * - Muestra navegación solo si hay sesión.
+ */
+
 @Component({
   selector: 'app-root',
   standalone: true,

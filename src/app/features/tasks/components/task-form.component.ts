@@ -7,9 +7,14 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { Task } from '../services/tasks.api';
 
-/**
- * Reusable reactive form for creating or editing a task.
- */
+// Renderiza un formulario **reactivo** con:
+// title: string` (requerido)
+// completed: boolean` (checkbox)
+// Si recibe una tarea por `@Input task`, **precarga** el formulario (modo edición).
+// No conoce rutas ni HTTP: al guardar **emite** los datos al padre y el padre decide
+// si crea/actualiza en el servicio correspondiente.
+// Muestra **validaciones** (`mat-error`) y controles accesibles (labels/aria).
+
 @Component({
   selector: 'app-task-form',
   standalone: true,
@@ -45,11 +50,8 @@ import { Task } from '../services/tasks.api';
   ],
 })
 export class TaskFormComponent implements OnChanges {
-  /** Task to edit. If undefined, the form is in create mode. */
   @Input() task?: Task | null;
-  /** Emits the task data when the form is submitted. */
   @Output() save = new EventEmitter<Partial<Task>>();
-  /** Emits when the user cancels editing. */
   @Output() cancel = new EventEmitter<void>();
 
   form: FormGroup;

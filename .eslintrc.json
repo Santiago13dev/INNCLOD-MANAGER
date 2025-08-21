@@ -14,7 +14,7 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
-        // custom lint rules will be added later
+        
       }
     },
     {
