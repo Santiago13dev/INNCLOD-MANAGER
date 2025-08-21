@@ -155,7 +155,6 @@
 ```bash
 ng serve   # desarrollo
 ng build   # build de producción
-ng test    # unit tests (si se incluyen)
 ```
 
 > ¡Listo! Para evaluar, basta con `npm install` y `ng serve`, abrir `http://localhost:4200/` y seguir el checklist de “Cómo evaluar”.
