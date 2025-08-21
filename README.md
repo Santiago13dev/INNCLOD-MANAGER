@@ -9,7 +9,7 @@
 
 </div>
 
-> **Gestor de Proyectos y Tareas para prueba técnica.**
+> **Innclod Manager es una aplicación Angular 17 que implementa un gestor de proyectos y tareas como parte de una prueba técnica. Utiliza la API standalone de Angular para simplificar la estructura, carga perezosa de vistas, Angular Material para la interfaz y una autenticación simulada mediante localStorage. La aplicación obtiene proyectos y tareas desde el servicio público jsonplaceholder.typicode.com y permite crear, editar y borrar elementos localmente.**
 
 ---
 
